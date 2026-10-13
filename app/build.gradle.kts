@@ -1,5 +1,3 @@
-import org.gradle.api.tasks.compile.JavaCompile
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -24,22 +22,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    tasks.withType<JavaCompile>().configureEach {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        kotlinOptions.jvmTarget = "1.8"
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
+
 }
 
 dependencies {
