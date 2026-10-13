@@ -5,3 +5,10 @@ local.properties
 *.iml
 .idea/
 .DS_Store
+
+.gradle/
+**/build/
+local.properties
+failed-run.log
+*.apk
+*.aab
